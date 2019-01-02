@@ -1,0 +1,207 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,500,700,900|Dosis:800|Playfair+Display:400,400italic,900italic|Lora:700|Syncopate:700|Roboto+Condensed:300italic|Oswald:700);
+
+*, *:after, *:before { box-sizing: border-box; }
+.clearfix:before, .clearfix:after {display: table;  content: ''; }
+.clearfix:after { clear: both; }
+
+body {
+  background: #fff;
+  color: #1e1a1b;
+  font-weight: 500;
+  font-size: 1em;
+  font-family: 'Raleway', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  outline: none;
+  color: #dd3e62;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1e1a1b;
+}
+
+a:focus {
+  outline: none;
+}
+
+.hidden {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+/* Grid */
+.grid__item {
+  height: calc(100vh - 40px);
+  min-height: 460px;
+  max-width: calc(100vw - 40px);
+  background: url(../img/bg.jpg) no-repeat 50% 50%;
+  background-size:cover;
+  margin: 20px;
+  padding: 100px 0;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-direction: column;
+  -webkit-transform: translate3d(0,0,0); /* Solves Safari bug because of SVG clipping mask */
+}
+
+.grid__item p {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #777;
+}
+
+/* Background colors */
+.color-1 { background: #E8E0DA; }
+.color-2 { background: #576b67; }
+.color-3 { background: #383A35; }
+.color-4 { background: #333; }
+.color-5 { background: #fda9a9; }
+.color-7 { background: #cde7d3; }
+.color-8 { background: #DCECDD; }
+.color-9 { background: #dedbba; }
+.color-10 { background: #222; }
+.color-11 { background: #515151; }
+
+/* Related demos */
+.custom-btn {
+  background-color: #45bef4;
+  padding: 15px 40px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  font-size: 18px;
+  color: #FFF;
+  border: none;
+}
+.custom-btn-2 {
+  background-color:#ff7d4a ;
+  padding: 15px 40px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border: none;
+  margin-left: 15px;
+  font-size: 18px;
+  color: #FFF;
+}
+.custom-btn:hover {
+  background-color: #35b5ee;
+  color:#FFF;
+}
+.custom-btn-2:hover {
+  background-color: #fa6d36;
+  color:#FFF;
+}
+.third-link {color:#f2f0ef; margin-top:30px; text-decoration:underline;}
+.third-link:hover {color:#b8e6fb;}
+
+@media screen and (max-width: 50em) {
+  .codrops-header {
+    padding: 3em 10% 4em;
+  }
+  .grid__item {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .codrops-header h1 {
+    font-size: 1.85em;
+  }
+}
+/* General link styles */
+.link {
+  outline: none;
+  text-decoration: none;
+  position: relative;
+  font-size: 8em;
+  line-height: 1;
+  color: #9e9ba4;
+  display: inline-block;
+}
+
+/* Takiri */
+.link--takiri {
+  font-family: Raleway, serif;
+  padding: 0 10px 20px;
+
+}
+
+.link--takiri:hover {
+  color: #fff;
+}
+
+.link--takiri::before {
+  content: '';
+  position: absolute;
+  height: 37px;
+  width: 80%;
+  top: 50%;
+  margin-top: -40px;
+  left: -15.5%;
+  z-index: -1;
+  background: #FF7D4A;
+  -webkit-transform: rotate3d(0,0,1,61deg) scale3d(0,1,1);
+  transform: rotate3d(0,0,1,61deg) scale3d(0,1,1);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+
+}
+
+.link--takiri:hover::before {
+  -webkit-transform: rotate3d(0,0,1,61deg) scale3d(1,1,1);
+  transform: rotate3d(0,0,1,61deg) scale3d(1,1,1);
+}
+
+.link--takiri span {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  left: 0;
+  text-align: center;
+  letter-spacing: 9px;
+  color: #fff;
+  bottom: 0;
+  opacity: 1;
+  -webkit-transform: translate3d(-10px,-10px,0);
+  transform: translate3d(-10px,-10px,0);
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.link--takiri:hover span {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+
+@media screen and (max-width: 500px) {
+  .link.link--takiri {
+    transform: scale(0.6);
+  }
+  .custom-btn, .custom-btn-2 {
+    display:block;
+    margin-left:0;
+    margin-top:10px;
+  }
+}
