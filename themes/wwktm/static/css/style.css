@@ -223,6 +223,9 @@ a:focus {
   .link.link--takiri {
     transform: scale(0.6);
   }
+  .link--takiri span{
+    letter-spacing:7px;
+  }
   .btn {
     display:block;
     margin-left:0;
