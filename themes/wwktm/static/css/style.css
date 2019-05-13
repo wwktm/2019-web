@@ -62,7 +62,7 @@ section.content.white {background: #fff;}
   .newsletter-section input[type="email"]{width:50%;}
 }
 
-
+body{background: pink}
 .subtitle .color{
     color: #EC7B53;
     font-weight: bold;
