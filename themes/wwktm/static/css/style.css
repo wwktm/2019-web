@@ -22,8 +22,10 @@ h2{ font-size: 3rem; font-family: 'Merriweather', serif; font-weight: 700; }
 .newsletter-section .btn-primary:hover {background-color:#2dabe3; border:1px solid #45bef4;}
 
 /* main content section */
-section.content, section.content:not(:last-child){ position:relative; background:#fef8f6; margin:0; }
+section.content, 
+section.content:not(:last-child){ position:relative; background:#fef8f6; margin:0; }
 section.content .container{ padding:inherit 100px; }
+section.content.white {background: #fff;}
 
 /* footer section */
 .footer { background: #000; color: #fff; padding: 2rem 20px; margin-top:0 !important; }
@@ -58,4 +60,10 @@ section.content .container{ padding:inherit 100px; }
   #main-logo{ opacity:0.2; transform: scale(4); right:60px; }
   .what{ width:100%; }
   .newsletter-section input[type="email"]{width:50%;}
+}
+
+
+.subtitle .color{
+    color: #EC7B53;
+    font-weight: bold;
 }
