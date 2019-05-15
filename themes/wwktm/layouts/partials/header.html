@@ -5,12 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{.Title}} : Web Weekend Kathmandu 2019</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ .Params.desc }}" />
+    <meta name="keywords" content="{{ .Params.keywords }}" />
+    <meta property="image" content="{{ .Params.image }}" />
+
+    <meta property="og:url" content="{{ .Site.BaseURL }}{{ .RelPermalink }}" />
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="{{.Title }} : Web Weekend Kathmandu" />
-    <meta
-      property="og:description"
-      content="wwktm is an effort to gather experts, both national and international, and create an environment for new partnerships, collaborations and learning groups to be formed. We want to create a space that encourages participation and then the dynamics of the group will take over the direction."
-    />
-    <meta property="og:image" content="https://2018.wwktm.co/img/og.jpg" />
+    <meta property="og:description" content='{{ .Params.desc }}' />
+    <meta property="og:image" content="{{ .Params.image }}" />
+
+    <meta name="twitter:title" content="{{.Title }} : Web Weekend Kathmandu">
+    <meta name="twitter:description" content="{{ .Params.desc }}">
+    <meta name="twitter:image" content="{{ .Params.image }}">
+    <meta name="twitter:card" content="summary">
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
