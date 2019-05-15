@@ -1,10 +1,10 @@
-body{ font-family: 'Montserrat', sans-serif; }
+body{ font-family: 'Montserrat', sans-serif; font-size: 16px !important; }
 .navbar-item img{ max-height:40px; }
 .navbar{ box-shadow:0px 0px 10px #ddd; padding:10px 0; text-transform: uppercase; font-weight:bold; background:rgba(255,255,255,0.7); }
 .hero-content{ margin-top:100px; position:relative; z-index:1; width:50%; min-height:260px;}
 .small-title{ font-weight: 700; color: #45bef4; margin-bottom: 0; text-align: center; text-transform: uppercase; font-size: 1rem; letter-spacing: 8px; }
-h1.title{ font-size:3.5rem; font-family:'Merriweather', serif; font-weight:bold; line-height:130%; margin:0 !important;}
-.title:not(.is-spaced) + .subtitle{ font-size:1.5rem; margin-top:20px;}
+h1.title{ font-size:3.8rem; font-family:'Merriweather', serif; font-weight:bold; line-height:130%; margin:0 !important; color: #262A41;}
+.title:not(.is-spaced) + .subtitle{ font-size:2rem; margin-top:20px;}
 h2{ font-size: 3rem; font-family: 'Merriweather', serif; font-weight: 700; }
 #main-logo{ position:absolute; top:60px; right:60px; width:60%; height:100%; transform: scale(2.75) }
 .what{ width:60%; padding:20px; background: rgba(255,255,255,0.6); margin:50px auto; font-size:1.25rem; line-height:150%; }
@@ -23,7 +23,7 @@ h2{ font-size: 3rem; font-family: 'Merriweather', serif; font-weight: 700; }
 
 /* main content section */
 section.content, 
-section.content:not(:last-child){ position:relative; background:#fef8f6; margin:0; }
+section.content:not(:last-child){ position:relative; background:#fef8f6; margin:0; padding:6rem 1.5rem; }
 section.content .container{ padding:inherit 100px; }
 section.content.white {background: #fff;}
 
@@ -62,8 +62,59 @@ section.content.white {background: #fff;}
   .newsletter-section input[type="email"]{width:50%;}
 }
 
-body{background: red}
+
+.content.is-medium{
+  font-size: 16px;
+  line-height: 180%;
+  color: #1E2441;
+}
 .subtitle .color{
     color: #EC7B53;
     font-weight: bold;
+}
+.pricing-table.is-comparative{
+  margin-bottom: 100px !important;
+}
+.alternative{
+  margin-bottom: 100px !important;
+}
+.content h3:not(:first-child){
+  margin-top: 20px;
+  font-size: 1.25rem;
+  color: ##4a4a4a
+}
+.pricing p:not(:last-child){
+  font-size: 16px;
+  line-height: 1.6;
+}
+p.lead{
+  min-height: 80px;
+}
+.orange{
+  color: #EC7B53 !important;
+}
+.numbers{
+  overflow: hidden;
+  margin-left: 0 !important;
+}
+.content .numbers li+li{
+  margin-top: 0;
+}
+.numbers li{
+  float: left;
+  padding-right: 50px;
+  list-style: none;
+}
+.numbers li strong{
+  color: #45BEF4;
+  display: block;
+  font-size: 2.6rem;
+  padding-top: 5px;
+  line-height:170%; 
+}
+.content h2{
+  font-size: 2.25rem;
+}
+.doubleSpacing{
+  margin-bottom: 80px
 }
