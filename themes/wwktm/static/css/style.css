@@ -24,7 +24,7 @@ h2{ font-size: 3rem; font-family: 'Montserrat', serif; font-weight: 700; }
 /* main content section */
 section.content, 
 section.content:not(:last-child){ position:relative; background:#fef8f6; margin:0; padding:6rem 1.5rem; }
-section.content .container{ padding:inherit 100px; }
+section.content .container{}
 section.content.white {background: #fff;}
 
 /* footer section */
@@ -59,6 +59,11 @@ section.content.white {background: #fff;}
   .hero-content{width:100%; margin-top:20px;}
   #main-logo{ opacity:0.2; transform: scale(4); right:60px; }
   .what{ width:100%; }
+  .numbers li{
+    float: none !important;
+    display: block;
+    margin-bottom: 20px;
+  }
   .newsletter-section input[type="email"]{width:50%;}
 }
 
@@ -145,6 +150,7 @@ p.lead{
   letter-spacing: .1rem;
   font-weight: bold;
   text-transform: uppercase;
+  color: #EC7B53;
 }
 
 .pricing .card-price {
@@ -198,4 +204,35 @@ p.lead{
 }
 
 
+.pricing .is-divider-vertical[data-content]::after, 
+.pricing .is-divider[data-content]::after{
+  background: #fef8f6;
+}
 
+.supporters img{max-width: 150px; margin:1rem 3rem 2rem 0rem ; opacity: .3; -webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out;  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.supporters img:hover{opacity: 1; -webkit-filter: none; /* Safari 6.0 - 9.0 */
+  filter:none;}
+
+.supporters .columns{
+
+
+}
+.supporters .column{
+  display: table-cell;
+  vertical-align: middle;
+}
+.final p.lead{
+  padding-left: 5rem;
+  padding-right: 5rem;
+  font-size: 18px;
+  min-height: inherit;
+}
+.button.is-primary{
+  background: #EE4501;
+}
+.button.is-large{
+  padding-left: 2em;
+padding-right: 2em;
+}
