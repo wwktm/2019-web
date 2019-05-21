@@ -444,6 +444,35 @@ p.lead {
   height: 400px;
 }
 
+.hide-box-sm {
+  display: inline-block;
+}
+
+.show-box-sm {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-2 {
+    width: 100%;
+  }
+
+  .grid-2 > .box2 {
+    width: 50%;
+  }
+  .grid-4 {
+    width: 100%;
+  }
+
+  .hide-box-sm {
+    display: none;
+  }
+
+  .show-box-sm {
+    display: inline-block;
+  }
+}
+
 .text-holder {
   position: absolute;
   top: 50%;
