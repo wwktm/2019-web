@@ -386,6 +386,7 @@ p.lead {
   .box2.box-blue, .box2.box-orange{
     display:block;
     width:100%;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
   }
 }
 
