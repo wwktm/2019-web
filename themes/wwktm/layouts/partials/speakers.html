@@ -1,0 +1,12 @@
+<div class="columns is-multiline">
+    {{ with .Site.GetPage "/speakers" }}
+        {{ range .Pages}}
+        <div class="column is-4 speaker">
+                <img class="card-img-top" src="{{.Params.img}}" alt="{{ .Title }}">
+            <h1>{{ .Title }}
+                </h1>
+                <p>{{ .Params.topic }}</p>
+        </div>
+        {{ end }}
+    {{ end }}
+</div>

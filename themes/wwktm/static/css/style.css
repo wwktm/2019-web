@@ -495,3 +495,42 @@ p.lead {
 }
 
 
+#speakers h1 {
+  font-size: 34px;
+  color: #D3D3D8;
+  font-weight: bold
+}
+
+#speakers .speaker {
+  margin-top: -170px;
+  margin-bottom: 170px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+#speakers .speaker img {
+  object-fit: cover;
+
+  width: 300px;
+  height: 337px;
+}
+
+#speakers .speaker h1 {
+  color: #21253F;
+}
+
+#speakers .speaker:hover h1 {
+  color: #5FC6F1;
+}
+
+/* 2,5,8,11 */
+
+#speakers .speaker:nth-child(3n+2) {
+  margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  #speakers .speaker {
+    margin: 0;
+  }
+}
