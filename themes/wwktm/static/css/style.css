@@ -121,7 +121,8 @@ h3 {
 
 /* main content section */
 section.content,
-section.content:not(:last-child) {
+section.content:not(:last-child),
+section.main-content{
   position: relative;
   background: #fef8f6;
   margin: 0;
@@ -129,7 +130,7 @@ section.content:not(:last-child) {
 }
 section.content .container {
 }
-section.content.white {
+section.content.white, section.white{
   background: #fff;
 }
 
@@ -232,6 +233,20 @@ p.lead {
 }
 .doubleSpacing {
   margin-bottom: 50px;
+}
+.hidden {
+  display:none;
+}
+
+#ticket-form{
+  margin-bottom:60px;
+}
+.breadcrumb li a{
+  color: #999;
+  cursor:default;
+}
+.breadcrumb ol, .breadcrumb ul{
+  margin-left:0;
 }
 
 
