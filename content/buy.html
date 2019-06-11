@@ -1,0 +1,279 @@
+---
+title: "Buy"
+desc : "wwktm is an effort to gather experts, both national and international, and create an environment for new partnerships, collaborations and learning groups to be formed. We want to create a space that encourages participation and then the dynamics of the group will take over the direction."
+author : "Web Weekend ktm"
+keywords : "conference, nepal, web weekend kathmandu, tech conference, kathmandu"
+image : "https://2018.wwktm.co/img/og.jpg"
+type: "none"
+---
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="title">Buy Tickets</h1>
+      </div>
+      {{< svg >}}
+    </div>
+  </div>
+</section>
+<section class="main-content white"><div class="container"><div class="columns is-centered"><div class="column is-half">
+<nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
+  <ul>
+    <li class="is-active"><a href="#">Personal Information</a></li>
+    <li><a href="#">Payment</a></li>
+    <li><a href="#">Miscellaneous</a></li>
+  </ul>
+</nav>
+<hr />
+<form id="ticket-form">
+  <fieldset id="personal_details">
+    <div class="field">
+      <label class="label" for="full-name">Full Name *</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Lady Gaga" name="full-name" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label" for="phone-number">Phone Number *</label>
+      <div class="control">
+        <input class="input" type="number" placeholder="009779812345678" name="phone-number" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label" for="email-address">Email address *</label>
+      <div class="control">
+        <input class="input" type="email" placeholder="awesome@email.com" name="email-address" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label" for="coming-from">Coming from (country) *</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Nepal" name="coming-from" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label" for="company">Company</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="StarShip Pvt. Ltd." name="company">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label" for="position">Position</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Software Design Engineer" name="position">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label" for="twitter">Twitter ID</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="weekend_web" name="twitter">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label" for="picture">Link to Picture</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="https://..." name="picture">
+      </div>
+      <p class="help">This will be shown on the website on the "attendess" page</p>
+    </div>
+
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-success is-large is-rounded" data-next="payment" data-self="personal_details">Next</button>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset id="payment" class="hidden">
+    <div class="field">
+      <label class="label">Payment Method</label>
+      <div class="control">
+        <div class="select">
+          <select id="payment-method">
+            <option value="esewa" selected>eSewa</option>
+            <option value="khalti">Khalti</option>
+            <option value="cash">Cash</option>
+            <option value="paypal">Paypal</option>
+          </select>
+        </div><p class="help" style="font-size:1rem"></p>
+      </div>
+    </div>
+
+    <div class="field" id="address-location">
+      <label class="label" for="address-location">Address Location (if cash)</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Sankhamul" name="address-location">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label" for="coupon-code">Coupon Code</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="WWKTM" name="coupon-code">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Amount</label>
+      <div class="control">
+        <h2 id="amount"> NRs. 2750 </h2>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Payment Reference</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Text input">
+      </div>
+      <p class="help" style="font-size:1rem"><strong>Note: </strong> Please make the payment and put the payment reference code in the field above</p>
+    </div>
+
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-success is-large is-rounded" data-next="payment" data-self="personal_details">Next</button>
+        <button class="button is-large is-rounded is-light" data-self="payment" data-next="personal_details">Previous</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+
+</div> </div> </div> </section> <!-- container, columns, column -->
+
+<script type="text/javascript">
+//Object assign polyfill from MDN
+if (typeof Object.assign !== 'function') {
+  // Must be writable: true, enumerable: false, configurable: true
+  Object.defineProperty(Object, "assign", {
+    value: function assign(target, varArgs) { // .length of function is 2
+      'use strict';
+      if (target === null || target === undefined) {
+        throw new TypeError('Cannot convert undefined or null to object');
+      }
+
+      var to = Object(target);
+
+      for (var index = 1; index < arguments.length; index++) {
+        var nextSource = arguments[index];
+
+        if (nextSource !== null && nextSource !== undefined) { 
+          for (var nextKey in nextSource) {
+            // Avoid bugs when hasOwnProperty is shadowed
+            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+              to[nextKey] = nextSource[nextKey];
+            }
+          }
+        }
+      }
+      return to;
+    },
+    writable: true,
+    configurable: true
+  });
+  }
+</script>
+
+<script type="text/javascript">
+  var initialPrice = {
+    "npr" : 2750,
+    "usd" : 30
+  }
+  var defaultPrice = Object.assign({}, initialPrice)
+
+  var amountBlock = document.getElementById("amount")
+  var paymentMethod = document.getElementById("ticket-form").elements["payment-method"]
+  var couponCode = document.getElementById("ticket-form").elements["coupon-code"]
+
+  function getNPRAmount(options) {
+    if(options && options.isCash === true)
+      return "NRs. " + (defaultPrice.npr + 50)
+    return "NRs. " + defaultPrice.npr
+  }
+  function getUSDAmount() { return "USD. " + defaultPrice.usd }
+
+  function updatePrices() {
+    var paymentMethod = document.getElementById("ticket-form").elements["payment-method"]
+    var helpContainer = paymentMethod.parentElement.nextSibling
+    switch(paymentMethod.value) {
+      case "esewa":
+        amountBlock.innerHTML = getNPRAmount()
+        helpContainer.innerHTML = "Please transfer the amount to esewa id tickets@wwktm.co"
+        return
+      case "khalti":
+        amountBlock.innerHTML = getNPRAmount()
+        helpContainer.innerHTML = "Please transfer the amount to khalti id tickets@wwktm.co"
+        return
+      case "cash":
+        amountBlock.innerHTML = getNPRAmount({isCash: true})
+        helpContainer.innerHTML = "Cash is available inside Ring Road. We will contact you in the next days."
+        return
+      case "paypal":
+        amountBlock.innerHTML = getUSDAmount()
+        helpContainer.innerHTML = "Please transfer the amount to paypal id tickets@wwktm.co"
+        return
+    }
+  }
+
+  function handleCouponCodeChange(e) {
+    fetchOptions = {
+      method: "POST",
+      body: JSON.stringify({ "coupon_code":e.target.value })
+    }
+    fetch("/.netlify/functions/coupon_code", fetchOptions)
+    .then(fetchToJson)
+    .then(handlePriceUpdate)
+  }
+
+  function handlePriceUpdate(responseJSON) {
+    if(responseJSON.npr && responseJSON.usd) {
+      defaultPrice.npr = parseInt(responseJSON.npr)
+      defaultPrice.usd= parseInt(responseJSON.usd)
+    }
+    updatePrices()
+  }
+
+  function fetchToJson(response) {
+    return response.json()
+  }
+
+  /* page Switch */
+  var buttons = document.querySelectorAll("#ticket-form .button");
+  function handlePageSwitch(e) {
+    e.preventDefault();
+    var dataSet = e.target.dataset;
+    var current = document.getElementById(dataSet["self"])
+
+    // check if form is valid
+    var valid = true
+    for( var elementIndex in current.elements ) {
+      var element = current.elements[elementIndex]
+      if(element.checkValidity && element.checkValidity() === false) {
+        element.reportValidity()
+        valid = false
+        break
+      }
+    }
+
+    if(valid === true) {
+      document.getElementById(dataSet["self"]).classList.add("hidden")
+      document.getElementById(dataSet["next"]).classList.remove("hidden")
+    }
+  }
+
+  /* event Handlers */
+  for (var button of buttons) button.addEventListener('click', handlePageSwitch)
+  paymentMethod.addEventListener('change', updatePrices)
+  couponCode.addEventListener('blur', handleCouponCodeChange)
+
+  function init() {
+    updatePrices()
+  }
+  init()
+
+</script>
