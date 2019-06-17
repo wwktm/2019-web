@@ -303,6 +303,8 @@ p.lead {
   transition: all 0.2s;
 }
 .card-body{ padding:1.25rem; }
+.help { font-size: 0.9rem }
+.breadcrumb ul li+li::before{padding:0 10px;}
 
 .pricing .is-divider-vertical[data-content]::after, 
 .pricing .is-divider[data-content]::after{ background: #fef8f6; }
