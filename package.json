@@ -1,0 +1,23 @@
+{
+  "name": "2019-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wwktm/2019-web.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/wwktm/2019-web/issues"
+  },
+  "homepage": "https://github.com/wwktm/2019-web#readme",
+  "dependencies": {
+    "airtable": "^0.6.0",
+    "dotenv": "^8.0.0"
+  }
+}

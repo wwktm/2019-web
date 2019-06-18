@@ -144,13 +144,14 @@ type: "none"
       <label class="label">Amount</label>
       <div class="control">
         <h2 id="amount"> NRs. 2750 </h2>
+        <input type="hidden" type="text" name="amount" placeholder="">
       </div>
     </div>
 
     <div class="field">
-      <label class="label">Payment Reference</label>
+      <label class="label" for="payment-reference">Payment Reference</label>
       <div class="control">
-        <input class="input" type="text" placeholder="Text input">
+        <input class="input" type="text" name="payment-reference" placeholder="">
       </div>
       <p class="help" style="font-size:1rem"><strong>Note: </strong> Please make the payment and put the payment reference code in the field above</p>
     </div>
@@ -259,22 +260,27 @@ if (typeof Object.assign !== 'function') {
     document.getElementById("address-location").classList.add("hidden")
     var paymentMethod = document.getElementById("ticket-form").elements["payment-method"]
     var helpContainer = paymentMethod.parentElement.nextSibling
+    var amountInput = document.getElementById("ticket-form").elements["amount"]
     switch(paymentMethod.value) {
       case "esewa":
         amountBlock.innerHTML = getNPRAmount()
+        amountInput.value = getNPRAmount()
         helpContainer.innerHTML = "Please transfer the amount to esewa id tickets@wwktm.co"
         return
       case "khalti":
         amountBlock.innerHTML = getNPRAmount()
+        amountInput.value = getNPRAmount()
         helpContainer.innerHTML = "Please transfer the amount to khalti id tickets@wwktm.co"
         return
       case "cash":
         document.getElementById("address-location").classList.remove("hidden")
         amountBlock.innerHTML = getNPRAmount({isCash: true})
+        amountInput.value = getNPRAmount({isCash: true})
         helpContainer.innerHTML = "Cash is available inside Ring Road. We will contact you in the next days."
         return
       case "paypal":
         amountBlock.innerHTML = getUSDAmount()
+        amountInput.value = getUSDAmount()
         helpContainer.innerHTML = "Please transfer the amount to paypal id tickets@wwktm.co"
         return
     }
@@ -302,10 +308,39 @@ if (typeof Object.assign !== 'function') {
     return response.json()
   }
 
-  function handleSubmitForm(e) {
-    console.log("submitting form");
-    e.stopPropagation();
-    return false;
+  async function handleSubmitForm() {
+    var ticketForm = document.getElementById("ticket-form").elements
+    var submitParams = {
+      "full-name" : ticketForm["full-name"].value,
+      "phone-number" : ticketForm["phone-number"].value,
+      "email-address" : ticketForm["email-address"].value,
+      "coming-from" : ticketForm["coming-from"].value,
+      "company" : ticketForm["company"].value,
+      "position" : ticketForm["position"].value,
+      "twitter" : ticketForm["twitter"].value,
+      "picture" : ticketForm["picture"].value,
+      "allergies" : ticketForm["allergies"].value,
+      "hike" : ticketForm["hike"].value,
+      "payment-method" : ticketForm["payment-method"].value,
+      "address-location" : ticketForm["address-location"].value,
+      "coupon-code" : ticketForm["coupon-code"].value,
+      "amount" : ticketForm["amount"].value,
+      "payment-reference" : ticketForm["payment-reference"].value,
+    }
+
+    fetchOptions = {
+      method: "POST",
+      body: JSON.stringify(submitParams)
+    }
+
+    try {
+      var success = await fetch("/.netlify/functions/register_ticket", fetchOptions)
+      .then(fetchToJson)
+      .then(handleTicketRegister)
+    } catch (e) {
+      console.error(e)
+      return false
+    }
   }
 
   /* page Switch */
@@ -327,14 +362,20 @@ if (typeof Object.assign !== 'function') {
       }
     }
 
+
     if(valid === true) {
+      if(e.target.id === "submitForm"){
+        var submitted = handleSubmitForm()
+        if(submitted === false)
+          return
+      }
       document.getElementById(dataSet["self"]).classList.add("hidden")
       document.getElementById(dataSet["next"]).classList.remove("hidden")
     }
   }
 
   /* event Handlers */
-  submitForm.addEventListener('click', handleSubmitForm)
+  //submitForm.addEventListener('click', handleSubmitForm)
   for (var button of buttons) button.addEventListener('click', handlePageSwitch)
   paymentMethod.addEventListener('change', updatePrices)
   couponCode.addEventListener('blur', handleCouponCodeChange)
