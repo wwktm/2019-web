@@ -2,3 +2,4 @@ public/
 x/
 node_modules/
 package-lock.json
+.env
