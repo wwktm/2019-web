@@ -1,7 +1,6 @@
 require('dotenv').config()
 
 exports.handler = function(event, context, callback) {
-  console.log("here")
   const runId = Date.now()
   .toString()
   .slice(-5)
