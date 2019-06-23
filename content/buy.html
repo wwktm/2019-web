@@ -141,7 +141,7 @@ type: "none"
         <div class="select">
           <select id="payment-method">
             <option value="esewa" selected>eSewa</option>
-            <option value="khalti">Khalti</option>
+            <!--<option value="khalti">Khalti</option>-->
             <option value="cash">Cash</option>
             <option value="paypal">Paypal</option>
           </select>
@@ -156,7 +156,7 @@ type: "none"
       </div>
     </div>
 
-    <div class="field">
+    <div class="field" id="coupon-code-field">
       <label class="label" for="coupon-code">Coupon Code</label>
       <div class="control">
         <input class="input" type="text" placeholder="WWKTM" name="coupon-code">
@@ -284,11 +284,15 @@ if (typeof Object.assign !== 'function') {
   var paymentMethod = document.getElementById("ticket-form").elements["payment-method"]
   var ticketType = document.getElementById("ticket-form").elements["ticket-type"]
   var couponCode = document.getElementById("ticket-form").elements["coupon-code"]
+  var couponCodeField = document.getElementById("coupon-code-field")
   var submitForm = document.getElementById("submitForm")
 
   function getNPRAmount(options) {
     var price = defaultPrice.npr
+    couponCodeField.classList.remove("hidden")
+
     if(ticketType.value === "community"){
+      couponCodeField.classList.add("hidden")
       price = communityPrice.npr
     }
     if(options && options.isCash === true)
@@ -297,7 +301,10 @@ if (typeof Object.assign !== 'function') {
   }
   function getUSDAmount() {
     var price = defaultPrice.usd
+    couponCodeField.classList.remove("hidden")
+
     if(ticketType.value === "community"){
+      couponCodeField.classList.add("hidden")
       price = communityPrice.usd
     }
     return "USD. " + price

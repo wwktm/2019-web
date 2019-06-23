@@ -128,7 +128,8 @@ section.main-content{
   margin: 0;
   padding: 6rem 1.5rem;
 }
-section.content .container {
+.container {
+  max-width:1152px
 }
 section.content.white, section.white{
   background: #fff;

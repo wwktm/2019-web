@@ -1,4 +1,5 @@
 require('dotenv').config()
+const axios = require('axios')
 
 exports.handler = function(event, context, callback) {
   const runId = Date.now()
@@ -19,8 +20,15 @@ exports.handler = function(event, context, callback) {
   const table = getEnv('AIRTABLE_TABLE', 'Registrations')
   const Airtable = require('airtable')
   var airtable= new Airtable({apiKey}).base(base)(table);
+  const webhook_url = getEnv('WEBHOOK_URL')
 
   log('inserting to airtable')
+  console.log(webhook_url)
+  if(webhook_url) {
+    axios.post(webhook_url, {
+      text: JSON.Stringify(body)
+    })
+  }
   airtable.create(body, function(err, record){
     if(err){
       log(err)

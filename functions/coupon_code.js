@@ -7,8 +7,8 @@ var CouponCodes = {
 
 exports.handler = function(event, context, callback) {
   var rate = {
-    "npr" : "3500",
-    "usd" : "50"
+    "npr" : "2750",
+    "usd" : "30"
   }
 
   try {
