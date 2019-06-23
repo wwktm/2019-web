@@ -26,7 +26,7 @@ exports.handler = function(event, context, callback) {
   console.log(webhook_url)
   if(webhook_url) {
     axios.post(webhook_url, {
-      text: JSON.Stringify(body)
+      text: JSON.stringify(body)
     })
   }
   airtable.create(body, function(err, record){
