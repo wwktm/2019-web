@@ -341,6 +341,13 @@ if (typeof Object.assign !== 'function') {
   }
 
   function handleCouponCodeChange(e) {
+    if(e.target.value === '') {
+      handlePriceUpdate(initialPrice)
+      return;
+    }
+
+    var couponFieldControl = couponCodeField.querySelector('.control')
+    couponFieldControl && couponFieldControl.classList.add("is-loading")
     fetchOptions = {
       method: "POST",
       body: JSON.stringify({ "coupon_code":e.target.value })
@@ -348,6 +355,12 @@ if (typeof Object.assign !== 'function') {
     fetch("/.netlify/functions/coupon_code", fetchOptions)
     .then(fetchToJson)
     .then(handlePriceUpdate)
+    .then(function() {
+      couponFieldControl && couponFieldControl.classList.remove("is-loading")
+    })
+    .catch(function(error) {
+      couponFieldControl && couponFieldControl.classList.add("is-loading")
+    })
   }
 
   function handlePriceUpdate(responseJSON) {
