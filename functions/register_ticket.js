@@ -23,7 +23,7 @@ exports.handler = function(event, context, callback) {
   const webhook_url = getEnv('WEBHOOK_URL')
 
   log('inserting to airtable')
-  console.log(webhook_url)
+  log('sending webhook')
   if(webhook_url) {
     axios.post(webhook_url, {
       text: JSON.stringify(body)
