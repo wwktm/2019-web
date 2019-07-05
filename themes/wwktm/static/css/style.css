@@ -2,8 +2,29 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px !important;
 }
-.navbar-item img {
-  max-height: 40px;
+.navbar-brand img{
+  height: 45px;
+  display: block;
+}
+.navbar-item{
+  padding:5px 25px; 
+  color: #4a4a4a;
+    -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+  margin: 5px; 
+  border-radius: 40px;
+
+}
+.navbar-item:hover{
+  background: #fff !important;
+  color: #FF7D4A !important;
+}
+.yo{
+   color: #FF7D4A;
+}
+.yo:hover{
+  background: #FF7D4A !important;
+  color: #fff !important;
 }
 .navbar {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
@@ -567,23 +588,22 @@ p.lead {
 
 
 #speakers h1 {
-  font-size: 34px;
+  font-size: 36px;
   color: #D3D3D8;
-  font-weight: bold
+  line-height: 42px;
+  font-weight: bold;
 }
 
 #speakers .speaker {
   margin-top: -170px;
   margin-bottom: 170px;
-  padding-bottom: 20px;
+  padding: 20px 50px 20px;
   position: relative;
 }
 
 #speakers .speaker img {
-  object-fit: cover;
-
-  width: 300px;
-  height: 337px;
+  width: 100%;
+  height: 340px;
 }
 
 #speakers .speaker h1 {
@@ -593,28 +613,28 @@ p.lead {
 #speakers .speaker:hover h1 {
   color: #5FC6F1;
 }
+
 #speakers .speaker:after{
   width: 300px;
-  height: 337px;
-  background-color: #fff;
-  content:' ';
-  display:block;
-  position:absolute;
-  top:0;
-  left:0;
-  z-index:-1;
-  transition: all 0.5s;
-}
-
-#speakers .speaker:hover:after{
-  width: 300px;
-  height: 337px;
+  height: 340px;
   background-color: #5FC6F1;
-  content:' ';
+  content:'';
   display:block;
   position:absolute;
   top:20px;
-  left:30px;
+  left:50px;
+  z-index:-1;
+  transition: all 0.3s;
+}
+
+#speakers .speaker:hover:after{
+
+  background-color: #5FC6F1;
+  content:'';
+  display:block;
+  position:absolute;
+  top:32px;
+  left:32px;
   z-index:-1;
 }
 
