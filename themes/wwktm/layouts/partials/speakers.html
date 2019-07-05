@@ -6,7 +6,9 @@
           <!--<h1> YES </h1>-->
         <!--{{ end }}-->
         <div class="column is-4 speaker">
-            <img class="card-img-top" src="{{.Params.img}}" alt="{{ .Title }}">
+            <div class="speakerimg">
+                <img class="card-img-top" src="{{.Params.img}}" alt="{{ .Title }}">
+            </div>
             <h1>{{ .Title }}</h1>
             <p>{{ .Params.topic }}</p>
         </div>
