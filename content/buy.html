@@ -267,6 +267,11 @@ if (typeof Object.assign !== 'function') {
     configurable: true
   });
   }
+
+function getHashValue(key) {
+  var matches = location.hash.match(key);
+  return matches ? matches[1] : null;
+}
 </script>
 
 <script type="text/javascript">
@@ -459,6 +464,9 @@ if (typeof Object.assign !== 'function') {
   couponCode.addEventListener('blur', handleCouponCodeChange)
 
   function init() {
+    if(getHashValue('community') !== null)
+      ticketType.value = 'community'
+
     updatePrices()
   }
   init()
