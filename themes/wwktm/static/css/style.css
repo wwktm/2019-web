@@ -555,7 +555,7 @@ p.lead {
 /* responsive */
 @media only screen and (max-width: 1300px) {
   #main-logo{ transform: scale(2.5); right:-60px; width:40%; top:100px; left: 70%;}
-  section.content .container{ padding:inherit; }
+  section.content .container{ }
 }
 @media only screen and (max-width: 850px) {
   .hero{ overflow:hidden; }
