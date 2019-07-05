@@ -550,14 +550,14 @@ p.lead {
 
 /* responsive */
 @media only screen and (max-width: 1300px) {
-  #main-logo{ transform: scale(2.5); right:-60px; }
+  #main-logo{ transform: scale(2.5); right:-60px; width:40%; top:100px; left: 70%;}
   section.content .container{ padding:inherit; }
 }
 @media only screen and (max-width: 850px) {
   .hero{ overflow:hidden; }
   h1.title{ font-size:2.5rem;}
   .hero-content{width:100%; margin-top:20px;}
-  #main-logo{ opacity:0.2; transform: scale(4); right:60px; }
+  #main-logo{ opacity:0.2; transform: scale(4); right:60px;}
   .what{ width:100%; }
   .numbers li{
     float: none !important;
