@@ -1,1 +1,6 @@
 public/
+x/
+node_modules/
+static/img/speaker-backup
+package-lock.json
+.env
