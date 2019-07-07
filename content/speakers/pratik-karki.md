@@ -2,7 +2,7 @@
 title: "Pratik Karki"
 aliases:
     - /speakers/pratik-karki/
-topic : "Know enough Git internals to be Dangerous"
+topic : "Git can do THAT!"
 date: "2018-07-16T22:49:37+05:45"
 #twitter : "https://twitter.com/amdsouza92"
 #github : "https://github.com/akashadhikari/"
