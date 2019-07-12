@@ -31,7 +31,7 @@ body {
   padding: 10px 0;
   text-transform: uppercase;
   font-weight: bold;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   -webkit-backdrop-filter:blur(8px);
   backdrop-filter: blur(8px);
 }
@@ -681,3 +681,16 @@ p.lead {
     margin: 0;
   }
 }
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap');
+.faq{
+  font-family: 'Lora', serif;
+  padding:40px 20px;
+  border-bottom: 1px dashed #d5d5d5;
+  font-size: 20px;
+  line-height: 32px;
+  transition: all 0.3s;
+}
+.faq:hover{
+  background: #fff;
+}
+.faq h3{ line-height: 36px; }
