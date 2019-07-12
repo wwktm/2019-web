@@ -681,14 +681,12 @@ p.lead {
     margin: 0;
   }
 }
-@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap');
 .faq{
-  font-family: 'Lora', serif;
   padding:40px 20px;
   border-bottom: 1px dashed #d5d5d5;
-  font-size: 20px;
-  line-height: 32px;
-  transition: all 0.3s;
+  font-size: 17px;
+  line-height: 30px;
+  transition: background 0.3s;
 }
 .faq:hover{
   background: #fff;
