@@ -359,7 +359,7 @@ p.lead {
 .supporters img{max-width: 150px; margin:0 1.5rem 2rem 1.5rem ; opacity: .3; -webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out;  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */ filter: grayscale(100%); }
 .supporters img:hover{opacity: 1; -webkit-filter: none; /* Safari 6.0 - 9.0 */ filter:none;}
 .supporters .subtitle{ opacity: .5; font-size: 16px; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 10px !important; }
-.supporters .column{ display: table-cell; vertical-align: middle; }
+.supporters .column{ vertical-align: middle; }
 .supporters .type{ margin: 15px 0; }
 #home .supporters img{ opacity: 1; -webkit-filter: none; /* Safari 6.0 - 9.0 */ filter:none; }
 .final p.lead{ padding-left: 5rem; padding-right: 5rem; font-size: 18px; min-height: inherit; }
