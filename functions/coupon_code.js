@@ -1,12 +1,6 @@
-var CouponCodes = {
-  "WWFEMALE" : {
-    "npr": "2000",
-    "usd": "30"
-  },
-}
 var rate = {
   "npr" : "3500",
-  "usd" : "50"
+  "usd" : "40"
 }
 
 require('dotenv').config()

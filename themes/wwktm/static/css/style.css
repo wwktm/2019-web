@@ -323,8 +323,16 @@ p.lead {
   font-size: 3rem;
   margin: 0;
 }
-.pricing .card-price .period {
-  font-size: 0.8rem;
+.pricing .card-price small{
+  font-size: 2rem;
+  line-height:3rem;
+  color: #444;
+  margin: 0;
+}
+.pricing .card-price .period,
+.pricing .card-price small .period {
+  font-size: 1rem;
+  padding-right:5px;
 }
 .pricing ul li {
   margin-bottom: 1rem;
