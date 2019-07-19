@@ -6,7 +6,7 @@ var CouponCodes = {
 }
 var rate = {
   "npr" : "3500",
-  "usd" : "40"
+  "usd" : "50"
 }
 
 require('dotenv').config()
