@@ -5,7 +5,7 @@ author : "Web Weekend ktm"
 keywords : "conference, nepal, web weekend kathmandu, tech conference, kathmandu"
 image : "https://2018.wwktm.co/img/og.jpg"
 ---
-
+  <link rel="stylesheet" href="/owlcarousel/owl.carousel.css">
   <body id="home">
     <section class="hero">
       <div class="hero-body">
@@ -201,6 +201,24 @@ image : "https://2018.wwktm.co/img/og.jpg"
       </div>
     </section>
 
+    <section class="section is-medium content testimonial">
+      <div class="container">
+        <h2>Supporters</h2>
+        <div class="columns has-text-centered">
+          <div class="column">
+            <div class="owl-carousel">
+              <div> Your Content </div>
+              <div> Your Content </div>
+              <div> Your Content </div>
+              <div> Your Content </div>
+              <div> Your Content </div>
+              <div> Your Content </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div class="newsletter-section" id="newsletter">
       <h4 class="small-title">Subscribe to our</h4>
       <h2 class="main-title">Newsletter</h2>
@@ -216,3 +234,10 @@ image : "https://2018.wwktm.co/img/og.jpg"
           </div>
       </div>
     </div>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="/owlcarousel/owl.carousel.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".owl-carousel").owlCarousel();
+      });
+    </script>
