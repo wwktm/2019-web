@@ -201,22 +201,62 @@ image : "https://2018.wwktm.co/img/og.jpg"
       </div>
     </section>
 
-    <section class="section is-medium content testimonial">
-      <div class="container">
+    <section class="section is-medium content testimonial-block">
         <h2>Supporters</h2>
-        <div class="columns has-text-centered">
-          <div class="column">
-            <div class="owl-carousel">
-              <div> Your Content </div>
-              <div> Your Content </div>
-              <div> Your Content </div>
-              <div> Your Content </div>
-              <div> Your Content </div>
-              <div> Your Content </div>
-            </div>
-          </div>
+        <div class="owl-carousel">
+              <div class="item">
+                <blockquote class="blockquote">
+                  <p>"Keep up the excellent work. It's exactly what I've been looking for. Not able to tell you how happy I am with travel app. Your company is truly upstanding and is behind its product 100%."</p>
+                  <footer class="blockquote-footer">
+                    <img src="img/44.jpg" class="img-fluid" alt="">
+                    Natalie Fernandez
+                  <cite>CEO at Stocky</cite></footer>
+                </blockquote>
+              </div>
+              <div class="item">
+                <blockquote class="blockquote">
+                  <p>"Very easy to use. I have gotten at least 50 times the value from mobile app. Mobile app has really helped our business. I made back the purchase price in just 48 hours!"</p>
+                  <footer class="blockquote-footer">
+                    <img src="img/55.jpg" class="img-fluid" alt="">
+                    Someone famous in <cite>Source Title</cite></footer>
+                </blockquote>
+              </div>
+              <div class="item">
+                <blockquote class="blockquote">
+                  <p>"Buy this now. I would also like to say thank you to all your staff. We can't understand how we've been living without wordpress theme."</p>
+                  <footer class="blockquote-footer">
+                    <img src="img/33.jpg" class="img-fluid" alt="">
+                    Someone famous in <cite>Source Title</cite></footer>
+                </blockquote>
+              </div>
+              <div class="item">
+                <blockquote class="blockquote">
+                  
+                  <p>"Buy this now. I would also like to say thank you to all your staff. We can't understand how we've been living without wordpress theme."</p>
+                  <footer class="blockquote-footer">
+                    <img src="img/22.jpg" class="img-fluid" alt="">
+                    Someone famous in <cite>Source Title</cite></footer>
+                </blockquote>
+              </div>
+              <div class="item">
+                <blockquote class="blockquote">
+                  
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                  <footer class="blockquote-footer">
+                    <img src="img/11.jpg" class="img-fluid" alt="">
+                    Someone famous in <cite>Source Title</cite></footer>
+                </blockquote>
+              </div>
+              <div class="item">
+                <blockquote class="blockquote">
+                  <p>"Keep up the excellent work. It's exactly what I've been looking for. Not able to tell you how happy I am with travel app. Your company is truly upstanding and is behind its product 100%."</p>
+                  <footer class="blockquote-footer">
+                    <img src="img/44.jpg" class="img-fluid" alt="">
+                    Natalie Fernandez
+                  <cite>CEO at Stocky</cite></footer>
+                </blockquote>
+              </div>
         </div>
-      </div>
     </section>
 
     <div class="newsletter-section" id="newsletter">
@@ -237,7 +277,33 @@ image : "https://2018.wwktm.co/img/og.jpg"
       <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="/js/owlcarousel/owl.carousel.js"></script>
     <script>
-      $(document).ready(function(){
-        $(".owl-carousel").owlCarousel();
+      var $owl = $('.owl-carousel');
+
+      $owl.children().each( function( index ) {
+        $(this).attr( 'data-position', index ); // NB: .attr() instead of .data()
+      });
+
+      $owl.owlCarousel({
+        center: true,
+        items:1,
+        loop:true,
+        margin:30,
+        autoplay:true,
+        autoplayHoverPause:true,
+        responsive:{
+            576:{
+                items:2
+            },
+            768:{
+                items:3
+            },
+            1200:{
+                items:4
+            }
+        }
+      });
+
+      $(document).on('click', '.owl-item>div', function() {
+        $owl.trigger('to.owl.carousel', $(this).data( 'position' ) );
       });
     </script>
