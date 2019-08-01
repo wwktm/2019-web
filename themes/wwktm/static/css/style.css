@@ -707,6 +707,16 @@ p.lead {
 }
 .faq h3{ line-height: 36px; }
 
+section.content.highlights-block {
+  padding:2rem 1.5rem;
+}
+.highlights-block img{
+  border-radius:10px;
+  opacity:0.6;
+}
+.highlights-block img:hover{
+  opacity:1;
+}
 .testimonial-block{
   padding-bottom: .5rem !important;
 }
