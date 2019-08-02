@@ -708,7 +708,7 @@ p.lead {
 .faq h3{ line-height: 36px; }
 
 section.content.highlights-block {
-  padding:2rem 1.5rem;
+  padding:2rem 1.5rem 0 1.5rem;
 }
 .highlights-block img{
   border-radius:10px;
@@ -720,6 +720,7 @@ section.content.highlights-block {
 }
 .testimonial-block{
   padding-bottom: .5rem !important;
+  padding-top: .5rem !important;
 }
 .testimonial-block .owl-carousel .owl-item {
   padding: 10px;
