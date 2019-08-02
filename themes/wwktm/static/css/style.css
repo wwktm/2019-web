@@ -720,7 +720,7 @@ section.content.highlights-block {
 }
 .testimonial-block{
   padding-bottom: .5rem !important;
-  padding-top: .5rem !important;
+  /*padding-top: .5rem !important;*/
 }
 .testimonial-block .owl-carousel .owl-item {
   padding: 10px;
