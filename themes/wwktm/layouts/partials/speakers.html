@@ -1,17 +1,22 @@
 <div class="columns is-multiline">
     {{ with .Site.GetPage "/speakers" }}
     {{ range .Pages}}
-        <!--<h1> {{ (len .Pages) }} </h1>-->
-        <!--{{ if (eq (mod (len .Pages) 3) 1) }}-->
-          <!--<h1> YES </h1>-->
-        <!--{{ end }}-->
-        <div class="column is-4 speaker">
+    <!--<h1> {{ (len .Pages) }} </h1>-->
+    <!--{{ if (eq (mod (len .Pages) 3) 1) }}-->
+    <!--<h1> YES </h1>-->
+    <!--{{ end }}-->
+
+    <div class="column is-4 speaker">
+            
+        <a href="{{.Permalink}}">
             <div class="speakerimg">
                 <img class="card-img-top" src="{{.Params.img}}" alt="{{ .Title }}">
             </div>
             <h1>{{ .Title }}</h1>
             <p>{{ .Params.topic }}</p>
-        </div>
-        {{ end }}
+        </a>
+    </div>
+
+    {{ end }}
     {{ end }}
 </div>
