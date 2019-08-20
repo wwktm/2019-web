@@ -7,7 +7,7 @@ date: "2018-07-16T22:49:37+05:45"
 twitter : "kazzalo"
 website : "www.kazzalow.com"
 layout : "speakers"
-from : "Australia"
+from : "australia"
 img: "/img/speakers/karen-lowry.jpg"
 
 about : "I’m a freelance writer and UX designer based in Perth, Western Australia. I have more than seven years experience working in web design and motion graphics, and more than ten years experience as a freelance writer and copywriter. I’m proficient in HTML, CSS, JavaScript, React.JS and PHP, among others, and I specialise in WordPress theme development and eCommerce. As well as my own freelance work, I contract out to The Creative Collective."

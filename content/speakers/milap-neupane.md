@@ -7,7 +7,7 @@ date: "2018-07-16T22:49:37+05:45"
 twitter : "_milap"
 github : "milap-neupane"
 layout : "speakers"
-from : "Nepal"
+from : "nepal"
 img: "/img/speakers/milap-neupane.jpg"
 
 about : "I am currently working as a Sr. Software Engineer at CloudFactory. I love solving problems, learning, and experimenting with things. I also like expressing my work and learning through different mediums like writing blogs. I write blogs for freecodecamp and hackernoon publications. I have been working with ruby on rails for more than 5 years. Beside ruby, I also like working with JS. I am entering now the new world of Golang. AWS for infra. Sometimes I also like taking my camera, going around the city and doing street photography. I love exploring around the city with my camera and around the web with different technologies."

@@ -8,7 +8,7 @@ twitter : "theawesomekarki"
 github : "prertik"
 website : "https://prertik.me/"
 layout : "speakers"
-from : "Nepal"
+from : "nepal"
 img: "/img/speakers/pratik-karki.jpg"
 
 about : " I'm Pratik Karki. I'm a programmer, a lifelong learner, Git contributor, GSoC'18 student, open-source contributor, and maintainer. I love to pop the hood of software and look inside, move a few things and close the hood,(80% of the time, I mess something up.) I'm a polyglot programmer(IOW: Jack of all trades). I love to talk about concurrency, optimizations, language design and algorithms. I work as a Software Engineer at Leapfrog Technology. When I'm not programming, I read a lot, to be a better programmer and my favorite super-hero is Ken Thompson."
