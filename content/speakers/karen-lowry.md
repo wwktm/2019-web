@@ -5,7 +5,7 @@ aliases:
 topic : "The gender gap between frontend and backend developers"
 date: "2018-07-16T22:49:37+05:45"
 twitter : "kazzalo"
-website : "www.kazzalow.com"
+website : "//www.kazzalow.com"
 layout : "speakers"
 from : "australia"
 img: "/img/speakers/karen-lowry.jpg"
