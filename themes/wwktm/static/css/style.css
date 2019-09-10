@@ -688,6 +688,11 @@ p.lead {
   margin-bottom: 0;
 }
 
+#speakers .speaker:nth-child(11) {
+  visibility: hidden;
+  height: 20px;
+}
+
 @media only screen and (max-width: 1280px) {
   #speakers .speaker:after{
     width:228px;
@@ -850,3 +855,6 @@ section.content.highlights-block {
 .testimonial-block .owl-carousel .owl-nav {
   text-align: center;
   font-size: 24px; }
+.venue-block{
+  background: url(../img/rounded.jpg) 0 0 !important;
+}
