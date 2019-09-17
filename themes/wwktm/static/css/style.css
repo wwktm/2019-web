@@ -627,6 +627,15 @@ p.lead {
   transition: all 0.3s;
 }
 
+.host {
+  margin-top: -300px;
+}
+#speakers .host .speaker {
+  margin: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 #speakers .speaker img {
   width: 100%;
 }
@@ -706,6 +715,10 @@ p.lead {
 }
 
 @media only screen and (max-width: 600px) {
+  .host {
+    margin: 0;
+  }
+
   #speakers .speaker {
     margin: 0;
   }
