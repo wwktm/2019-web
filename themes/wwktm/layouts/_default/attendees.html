@@ -1,0 +1,57 @@
+{{ partial "header.html" . }}
+
+<div class="page" data-0="background-position:center 0px;" data-600="background-position:center 200px;">
+	<div class="shape"> </div>
+	<div class="container">
+		<h2 class="main-title">Who is Attending ?</h2>
+		<h2 class="main-title"></h2>
+	</div>
+</div>
+<br />
+<div class="block alt" id="attendees">
+	<div class="container">
+		<h5 class="small-title text-left"> 🎉 Our Community Supporters : The real heroes</h5>
+		<p> These good souls decided to buy the community tickets and are sponsoring a scholarship/support ticket </p>
+		<div class="row">
+			{{ range sort .Params.community ".name" }}
+			<div class="col-6 col-sm-6 col-md-4 col-lg-2 speaker-container">
+				{{ if in .pic "http" }}
+				<div class="avatar-image" style="background-image: url('{{.pic}}'), url('/img/wwktm.jpg')"></div>
+				{{ else }}
+				<div class="avatar-image" style="background-image: url('/img/team/{{.pic}}'), url('/img/default-img.jpg')"></div>
+				{{ end }}
+				<h4 class="speaker-name">{{.name}}</h4>
+				<p class="speaker-place">{{.company}}</p>
+			</div>
+			{{ end }}
+		</div>
+		<h5 class="small-title  text-left"> Team </h5>
+		<div class="row rowspacing">
+			{{ range sort .Params.team ".name" }}
+			<div class="col-6 col-sm-6 col-md-4 col-lg-2">
+				<div class="avatar-image"><img src="/img/team/{{.pic}}" alt="{{.name}}" class="rounded"></div>
+				<h4 class="speaker-name">{{.name}}</h4>
+				<p class="speaker-place">{{.company}}</p>
+			</div>
+			{{ end }}
+			<div class="col-md-12">
+				<em>* Because our design guru wanted to be first</em>
+			</div>
+		</div>
+		<h5 class="small-title text-left"> Attendees </h5>
+		<div class="row">
+			{{ range sort .Params.attendees ".name" }}
+			<div class="col-6 col-sm-6 col-md-4 col-lg-2 speaker-container">
+				{{ if in .pic "http" }}
+				<div class="avatar-image" style="background-image: url('{{.pic}}'), url('/img/wwktm.jpg')"></div>
+				{{ else }}
+				<div class="avatar-image" style="background-image: url('/img/team/{{.pic}}'), url('/img/default-img.jpg')"></div>
+				{{ end }}
+				<h4 class="speaker-name">{{.name}}</h4>
+				<p class="speaker-place">{{.company}}</p>
+			</div>
+			{{ end }}
+		</div>
+	</div>
+</div>
+{{ partial "footer.html" . }}

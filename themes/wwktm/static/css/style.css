@@ -990,3 +990,21 @@ section.content.highlights-block {
     padding-left:40px;
   }
 }
+
+.single h1,
+.single h2,
+.single h3,
+.single h4,
+.single h5,
+.single h6 {
+    padding: 24px 0px !important;
+  }
+
+.single > p {
+  margin: 12px 0px !important;
+}
+
+.single ul {
+  list-style-type: disc;
+  padding: 0px 20px;
+}
