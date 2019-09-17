@@ -1,5 +1,6 @@
 ---
 title : "Terms and Condition"
+layout : "single-with-header"
 ---
 
 

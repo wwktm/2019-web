@@ -1,5 +1,6 @@
 ---
 title : "Privacy Policy for Web Weekend Kathmandu"
+layout : "single-with-header"
 ---
 
 
